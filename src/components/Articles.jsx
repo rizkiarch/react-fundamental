@@ -1,11 +1,10 @@
-function Article() {
-    const name = "Ikay";
-    const title = ["Tutorial Reactjs", "Tutorial Nextjs", "Tutorial Nodejs"]
+function Article(props) {
     return (
         <>
-            <div>{name}</div>
-            <div>{title.map((title) => {
-                return <div>{title}</div>
+            <div>{props.name}</div>
+            <div>
+                {props.titles.map((title) => {
+               return <div>{title}</div>
             })}</div>
         </>
     )
