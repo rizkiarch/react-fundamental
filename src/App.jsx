@@ -1,12 +1,19 @@
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import Home from './pages/index'
+import { GlobalContext } from './context'
+import { router } from './routers'
 
 function App() {
+  const user = {
+    username: "Ikay"
+  }
 
   return (
     <>
       <div className='App'>
-        <Home/>
+      <GlobalContext.Provider value={user} >
+        <RouterProvider router={router}></RouterProvider>
+      </GlobalContext.Provider>
       </div>
     </>
   )
