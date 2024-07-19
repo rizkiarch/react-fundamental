@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Tutorial Reactjs",
+        "tags": ["reactjs", "frontend"],
+        "date": "2024-07-01",
+        "isNew": true
+    },
+    {
+        "title": "Meningkatkan Reactjs",
+        "tags": ["reactjs", "frontend"],
+        "date": "2024-07-02",
+        "isNew": true
+    },
+    {
+        "title": "Tutorial Next-ui",
+        "tags": ["reactjs", "css"],
+        "date": "2024-07-03",
+        "isNew": false
+    }
+]
