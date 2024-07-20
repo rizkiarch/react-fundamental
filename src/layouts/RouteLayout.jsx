@@ -1,9 +1,31 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import "../styles/index.css";
 
 function RouteLayout() {
     return(
         <>
-        <Link to="/">Home</Link> |  <Link to="/blog">Blog</Link> |<Link to="/about">About</Link>
+        <NavLink className={({ isActive, isPending }) => 
+            isActive ? "active" : isPending ? "pending" : ""
+        } 
+        style={{ 
+            marginRight: "5px",
+         }}
+        to="/">Home</NavLink> |  
+        <NavLink className={({ isActive, isPending }) => 
+            isActive ? "active" : isPending ? "pending" : ""
+        } 
+        style={{ 
+            marginRight: "5px",
+            marginLeft: "5px",
+         }}
+         to="/blog">Blog</NavLink> |
+        <NavLink className={({ isActive, isPending }) => 
+            isActive ? "active" : isPending ? "pending" : ""
+        } 
+        style={{ 
+            marginRight: "5px",
+            marginLeft: "5px",
+         }}to="/about">About</NavLink>
         <p></p>
         <Outlet />
         </>
